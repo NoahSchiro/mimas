@@ -1,0 +1,232 @@
+{
+  "X1-RY62-B7": {
+    "imports": {
+      "GOLD_ORE": 1,
+      "SILVER_ORE": 1,
+      "PLATINUM_ORE": 1
+    },
+    "exports": {
+      "GOLD": 3,
+      "SILVER": 3,
+      "PLATINUM": 5
+    }
+  },
+  "X1-RY62-B6": {
+    "imports": {},
+    "exports": {}
+  },
+  "X1-RY62-FB5E": {
+    "imports": {},
+    "exports": {}
+  },
+  "X1-RY62-A1": {
+    "imports": {
+      "MEDICINE": 2,
+      "EXOTIC_MATTER": 1,
+      "FOOD": 1,
+      "JEWELRY": 1,
+      "CLOTHING": 1,
+      "EQUIPMENT": 1
+    },
+    "exports": {}
+  },
+  "X1-RY62-C46": {
+    "imports": {},
+    "exports": {}
+  },
+  "X1-RY62-D47": {
+    "imports": {
+      "FABRICS": 2,
+      "ELECTRONICS": 1,
+      "EQUIPMENT": 1,
+      "POLYNUCLEOTIDES": 2
+    },
+    "exports": {
+      "SHIP_PARTS": 3,
+      "MEDICINE": 3
+    }
+  },
+  "X1-RY62-E49": {
+    "imports": {
+      "IRON": 4,
+      "AMMUNITION": 1,
+      "ALUMINUM": 3
+    },
+    "exports": {
+      "ASSAULT_RIFLES": 3,
+      "FIREARMS": 2
+    }
+  },
+  "X1-RY62-F51": {
+    "imports": {
+      "IRON": 1,
+      "LIQUID_NITROGEN": 1,
+      "LIQUID_HYDROGEN": 1
+    },
+    "exports": {
+      "EXPLOSIVES": 3,
+      "AMMUNITION": 2
+    }
+  },
+  "X1-RY62-G53": {
+    "imports": {
+      "HYDROCARBON": 1,
+      "LIQUID_HYDROGEN": 3,
+      "LIQUID_NITROGEN": 2
+    },
+    "exports": {
+      "FUEL": 4,
+      "PLASTICS": 3,
+      "FERTILIZERS": 3
+    }
+  },
+  "X1-RY62-H54": {
+    "imports": {
+      "IRON_ORE": 1,
+      "DRUGS": 2,
+      "COPPER_ORE": 2,
+      "ALUMINUM_ORE": 2
+    },
+    "exports": {
+      "IRON": 3,
+      "COPPER": 3,
+      "ALUMINUM": 3
+    }
+  },
+  "X1-RY62-I58": {
+    "imports": {},
+    "exports": {}
+  },
+  "X1-RY62-I59": {
+    "imports": {},
+    "exports": {}
+  },
+  "X1-RY62-J60": {
+    "imports": {},
+    "exports": {}
+  },
+  "X1-RY62-K86": {
+    "imports": {
+      "FERTILIZERS": 1,
+      "ALUMINUM": 1,
+      "PLASTICS": 1,
+      "FABRICS": 1
+    },
+    "exports": {
+      "FOOD": 3,
+      "EQUIPMENT": 3,
+      "CLOTHING": 3
+    }
+  },
+  "X1-RY62-J61": {
+    "imports": {
+      "FOOD": 1,
+      "MEDICINE": 1,
+      "CLOTHING": 1,
+      "EQUIPMENT": 1,
+      "EXPLOSIVES": 1,
+      "AMMONIA_ICE": 1,
+      "POLYNUCLEOTIDES": 1,
+      "FIREARMS": 1,
+      "ASSAULT_RIFLES": 1
+    },
+    "exports": {
+      "IRON_ORE": 3,
+      "COPPER_ORE": 3,
+      "ALUMINUM_ORE": 2,
+      "PRECIOUS_STONES": 3,
+      "DRUGS": 3
+    }
+  },
+  "X1-RY62-F52": {
+    "imports": {
+      "IRON": 1,
+      "QUARTZ_SAND": 1,
+      "SILICON_CRYSTALS": 1,
+      "COPPER": 3
+    },
+    "exports": {
+      "FAB_MATS": 5,
+      "ELECTRONICS": 3
+    }
+  },
+  "X1-RY62-A4": {
+    "imports": {
+      "POLYNUCLEOTIDES": 1,
+      "ADVANCED_CIRCUITRY": 3
+    },
+    "exports": {
+      "NEURAL_CHIPS": 4
+    }
+  },
+  "X1-RY62-E50": {
+    "imports": {
+      "LIQUID_HYDROGEN": 1,
+      "LIQUID_NITROGEN": 1,
+      "FERTILIZERS": 1,
+      "IRON": 1
+    },
+    "exports": {
+      "MACHINERY": 3,
+      "POLYNUCLEOTIDES": 3,
+      "FABRICS": 3
+    }
+  },
+  "X1-RY62-A2": {
+    "imports": {
+      "SHIP_PARTS": 2,
+      "SHIP_PLATING": 3
+    },
+    "exports": {}
+  },
+  "X1-RY62-C45": {
+    "imports": {
+      "SHIP_PLATING": 1,
+      "SHIP_PARTS": 1
+    },
+    "exports": {}
+  },
+  "X1-RY62-H55": {
+    "imports": {
+      "SHIP_PLATING": 1,
+      "SHIP_PARTS": 2
+    },
+    "exports": {}
+  },
+  "X1-RY62-A3": {
+    "imports": {
+      "SILICON_CRYSTALS": 1,
+      "COPPER": 2
+    },
+    "exports": {
+      "MICROPROCESSORS": 3
+    }
+  },
+  "X1-RY62-H56": {
+    "imports": {},
+    "exports": {}
+  },
+  "X1-RY62-H57": {
+    "imports": {
+      "GOLD": 1,
+      "SILVER": 1,
+      "PRECIOUS_STONES": 3,
+      "DIAMONDS": 1
+    },
+    "exports": {
+      "JEWELRY": 3
+    }
+  },
+  "X1-RY62-D48": {
+    "imports": {
+      "ALUMINUM": 1,
+      "MACHINERY": 3,
+      "ELECTRONICS": 1,
+      "MICROPROCESSORS": 2
+    },
+    "exports": {
+      "SHIP_PLATING": 3,
+      "ADVANCED_CIRCUITRY": 3
+    }
+  }
+}
