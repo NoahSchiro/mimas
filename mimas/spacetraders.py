@@ -34,7 +34,7 @@ TRAIT_HEAD = {
 def handle_error(data):
     if "error" in data:
         print(json.dumps(data, indent=2))
-        exit(1)
+        raise Exception("Error in spacetraders response")
 
 def handle_pages(original_url, response, head=AUTH_HEAD):
     
@@ -362,6 +362,17 @@ def mine(ship_name):
 
     return response
 
+def siphon(ship_name):
+
+    siphon_url = f"{BASE_URL}my/ships/{ship_name}/siphon"
+
+    response = rq.post(siphon_url, headers=AUTH_HEAD).json()
+
+    handle_error(response)
+    response = handle_pages(siphon_url, response)
+
+    return response
+
 def create_survey(ship_name):
     
     survey_url = f"{BASE_URL}my/ships/{ship_name}/survey"
@@ -484,5 +495,9 @@ if __name__=="__main__":
     system = "X1-RY62"
 
     r = construction_info(jump_gate)
+
+    print(json.dumps(r, indent=2))
+
+    r = agent_info()
 
     print(json.dumps(r, indent=2))

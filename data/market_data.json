@@ -36,14 +36,14 @@
   },
   "X1-RY62-D47": {
     "imports": {
-      "FABRICS": 2,
+      "FABRICS": 1,
       "ELECTRONICS": 1,
       "EQUIPMENT": 1,
-      "POLYNUCLEOTIDES": 2
+      "POLYNUCLEOTIDES": 1
     },
     "exports": {
-      "SHIP_PARTS": 3,
-      "MEDICINE": 3
+      "SHIP_PARTS": 2,
+      "MEDICINE": 4
     }
   },
   "X1-RY62-E49": {
@@ -131,11 +131,11 @@
       "ASSAULT_RIFLES": 1
     },
     "exports": {
-      "IRON_ORE": 3,
-      "COPPER_ORE": 3,
-      "ALUMINUM_ORE": 2,
-      "PRECIOUS_STONES": 3,
-      "DRUGS": 3
+      "IRON_ORE": 5,
+      "COPPER_ORE": 5,
+      "ALUMINUM_ORE": 5,
+      "PRECIOUS_STONES": 5,
+      "DRUGS": 5
     }
   },
   "X1-RY62-F52": {
@@ -143,11 +143,11 @@
       "IRON": 1,
       "QUARTZ_SAND": 1,
       "SILICON_CRYSTALS": 1,
-      "COPPER": 3
+      "COPPER": 1
     },
     "exports": {
-      "FAB_MATS": 5,
-      "ELECTRONICS": 3
+      "FAB_MATS": 1,
+      "ELECTRONICS": 1
     }
   },
   "X1-RY62-A4": {
@@ -174,8 +174,8 @@
   },
   "X1-RY62-A2": {
     "imports": {
-      "SHIP_PARTS": 2,
-      "SHIP_PLATING": 3
+      "SHIP_PARTS": 5,
+      "SHIP_PLATING": 1
     },
     "exports": {}
   },
@@ -189,7 +189,7 @@
   "X1-RY62-H55": {
     "imports": {
       "SHIP_PLATING": 1,
-      "SHIP_PARTS": 2
+      "SHIP_PARTS": 1
     },
     "exports": {}
   },
@@ -220,13 +220,13 @@
   "X1-RY62-D48": {
     "imports": {
       "ALUMINUM": 1,
-      "MACHINERY": 3,
+      "MACHINERY": 1,
       "ELECTRONICS": 1,
-      "MICROPROCESSORS": 2
+      "MICROPROCESSORS": 1
     },
     "exports": {
-      "SHIP_PLATING": 3,
-      "ADVANCED_CIRCUITRY": 3
+      "SHIP_PLATING": 5,
+      "ADVANCED_CIRCUITRY": 4
     }
   }
 }

@@ -1,6 +1,7 @@
 from .spacetraders import *
 from .pathfinding import dist, construct_graph, bfs_with_weight_limit
-from .find_market import location_has_fuel, market_list
+from .market_data import market_data, market_data_lock, supply_levels, market_list, location_has_fuel
+from .save_load import save_json
 import json
 from datetime import datetime
 from time import sleep
@@ -16,6 +17,7 @@ class Ship():
 
         self.name     = ship_name
         self.status   = nav_info["status"]
+        self.role     = info["registration"]["role"]
         self.location = nav_info["waypointSymbol"]
         self.x = nav_info["route"]["destination"]["x"]
         self.y = nav_info["route"]["destination"]["y"]
@@ -178,6 +180,35 @@ class Ship():
 
         print(f"[{self.name}] [BUY] [{amount_to_buy} FUEL] (total: {total_price}) (unit price: {unit_price})")
 
+
+    # When we are at a waypoint we want to cache the data on the market
+    def cache_market_data(self):
+
+        # Get data on the market, specifically the data
+        # on trade goods
+        response = market_info(self.location)["data"]["tradeGoods"]
+
+        market_data_lock.acquire()
+
+        # For each good
+        for item in response:
+
+            # Get name, type (export/import), and supply level
+            symbol = item["symbol"]
+            market_type = item["type"]
+            item_supply = item["supply"]
+
+            # If it's an import, then mark in the approriate place
+            if market_type == "IMPORT":
+                market_data[self.location]["imports"][symbol] = supply_levels[item_supply]
+            elif market_type == "EXPORT":
+                market_data[self.location]["exports"][symbol] = supply_levels[item_supply]
+
+        # Save the json out so that we have up to date market data
+        save_json("./data/market_data.json", market_data)
+
+        market_data_lock.release()
+
     def buy_cargo(self, resource, quantity):
         response = buy_cargo(self.name, resource, quantity)
         
@@ -191,6 +222,9 @@ class Ship():
             self.cargo[resource] = quantity
 
         print(f"[{self.name}] [CARGO={sum(self.cargo.values())}/{self.cargo_capacity}]")
+
+        # Update how the market data has changed
+        self.cache_market_data()
 
         return total_price
 
@@ -213,11 +247,23 @@ class Ship():
             if self.cargo[resource] == 0:
                 del self.cargo[resource]
 
+        # Update how the market data has changed
+        self.cache_market_data()
+
         return total_price
 
     #ship.supply_construction(jump_gate, supply_item, 40)
     def supply_construction(self, good, quantity):
         _ = supply_construction(self.location, self.name, good, quantity)
+
+        # Remove that cargo from our inventory
+        if good in self.cargo:
+            self.cargo[good] -= quantity
+
+            # Delete the cargo if it reaches 0
+            if self.cargo[good] == 0:
+                del self.cargo[good]
+
         print(f"[{self.name}] [JUMP GATE CONSTRUCT] [{quantity} {good}]")
 
 
